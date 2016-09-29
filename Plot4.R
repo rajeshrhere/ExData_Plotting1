@@ -24,5 +24,5 @@ lines(pc$Time, pc$Sub_metering_2, type = "l", col = "red");
 lines(pc$Time, pc$Sub_metering_3, type = "l", col = "orange");
 plot(pc$Time, pc$Global_reactive_power/1000, type = "l", xlab = "", ylab = "Global Reactive Power (k.watts)")
 
-#dev.copy(png, "Plot4.png", width=480, height=480);
-#dev.off();
+dev.copy(png, "Plot4.png", width=480, height=480);
+dev.off();
