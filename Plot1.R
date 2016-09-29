@@ -13,7 +13,8 @@ pc$Sub_metering_3 <-  as.numeric(pc$Sub_metering_3)
 pc$Date <- strptime(pc$Date, "%d/%m/%Y")
 pc$Time <- strptime(pc$Time, "%H:%M:%S")
 pc <- subset(pc, Date == strptime("01-02-2007", "%d-%m-%Y") | Date == strptime("02-02-2007", "%d-%m-%Y"))
+
 hist(pc$Global_active_power/1000, col="red", xlab = "Global Active Power (kilowatts)", ylab = "Frequency", main = "Global Active Power");
+
 dev.copy(png, "Plot1.png", width=480, height=480);
 dev.off();
-#strptime(x, "%m/%d/%y %H:%M:%S")
